@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Learningview;
-//use Illuminate\Support\Facades\View;
+use App\Http\Controllers\LearningBlade;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +37,6 @@ Route::get('/userviewcheck/{user}', [Learningview::class, 'loadview']);
 //Learn Component Route
 Route::view('/learncompo', 'LearnCompo.user');
 Route::view('/learncompoabout', 'LearnCompo.about');
+
+//LearnBlade
+Route::get('/learnblade', [LearningBlade::class, 'index']);
